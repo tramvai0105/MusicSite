@@ -1,0 +1,52 @@
+  {% extends 'base.html' %}
+  {% load static %}
+  {% block content %}
+    <header>
+      <img src="{% static 'music/images/pigdance.png'%}" class="logo" alt="">
+      <h1 class="site-name">DANCING PIGS</h1>
+    </header>
+    <div class="container">
+      <div class="player">
+        <div class="player-track-info">
+          <img class="playercover" src="{% static 'music/images/magiccity.png'%}" alt="">
+          <h1 id="trackname" class="trackname">LSP - Magic City</h1>
+        </div>
+        <div class="controls">
+          <img id="prevtrack" src="{% static 'music/images/next_track.svg'%}" class="button prevtrack">
+          <img id="playbtn" class="button" src="{% static 'music/images/play.svg'%}">
+          <img id="stopbtn" class="button stopbutton" src="{% static 'music/images/stop.svg'%}" style="display: none;">
+          <img id="nexttrack" src="{% static 'music/images/next_track.svg'%}" class="button">
+          <div class="volumebar">
+            <div class="volume">
+            </div>
+          </div>
+          <img id="soundon" src="{% static 'music/images/soundon.svg'%}" class="button">
+          <img id="mute" src="{% static 'music/images/mute.svg'%}" class="button" style="display: none;">
+        </div>
+        <div class="trackprogress">
+          <div class="song-timer">
+            <h1 class="currenttime">00:00</h1>
+            <h1 class="fulltime">00:00</h1>
+          </div>
+          <div class="trackprogressarea">
+            <div class="trackprogressbar">
+            </div>
+          </div>
+        </div>
+        <audio id="audio" preload="auto">
+            <source id="mp3src" src="" type="audio/mpeg">
+        </audio>
+      </div>
+      <div class="tracks">
+        {% for song in songs %}
+          <div class="track">
+            <img src="{% static 'music/images/magiccity.png'%}" class="trackcover">
+            <img data-index = "" id="trackplaybtn" src="{% static 'music/images/play.svg'%}" class="trackplay">
+            <img data-index = "" id="trackstopbtn" src="{% static 'music/images/stop.svg'%}" class="trackplay" style="display: none">
+            <h1 class="trackname songname">{{song.author}} - {{song.name}}</h1>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <footer><h1 class="site-name" style="font-size: 24px;"  >Sity by Svin</h1></footer>
+  {% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <audio id="audio" src="shest.mp3" controls>  </audio>
+    <button onclick="Set()" type="button" name="button"></button>
+  <script type="text/javascript">
+    audio = document.getElementById("audio");
+
+    audio.volume = 0.1;
+
+    function Set() {
+      audio.currentTime = 100;
+    }
+
+  </script>
+  </body>
+</html>
