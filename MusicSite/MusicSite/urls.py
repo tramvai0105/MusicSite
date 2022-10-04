@@ -19,11 +19,11 @@ from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
-from music.views import MagicCityView, MagicCityJson, LspView
+from music.views import album_json, album_view, author_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('magiccity/', MagicCityView.as_view()),
-    path('magiccity/json', MagicCityJson.as_view()),
-    path('lsp/', LspView.as_view())
+    path('album/<album_url>', album_view),
+    path('album/<album_url>/json', album_json),
+    path('author/<author_name>', author_view),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -27,7 +27,7 @@ document.querySelector(".fulltime").style.display = "none";
 
 // Получаем Json из БД, формируем из него объект.
 const xhr = new XMLHttpRequest();
-xhr.open("GET", window.location.href + "json");
+xhr.open("GET", window.location.href + "/json");
 xhr.responseType = 'json';
 xhr.onload = () => {
   for (key in Object.keys(xhr.response)) {

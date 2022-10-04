@@ -6,10 +6,20 @@
       <h1 class="site-name">DANCING PIGS</h1>
     </header>
     <div class="container">
+      <div class="author">
+        <div class="authorname">
+          <img class="authorcover" src="{{author.authorcover.url}}" alt="">
+        </div>
+        <div class="authordisription">
+          <h1 class="authordisription">
+            {{author.authordisc}}
+          </h1>
+        </div>
+      </div>
       <div class="albums">
         {% for album in albums %}
           <div class="album">
-            <a href="{{album.page_url}}"><img class="albumcover" src="{% static 'music/images/magiccity.png'%}"></a>
+            <a href="../album/{{album.page_url}}"><img class="albumcover" src="{{album.albumcover.url}}"></a>
           </div>
         {% endfor %}
       </div>

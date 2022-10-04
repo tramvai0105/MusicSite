@@ -8,8 +8,8 @@
     <div class="container">
       <div class="player">
         <div class="player-track-info">
-          <img class="playercover" src="{% static 'music/images/magiccity.png'%}" alt="">
-          <h1 id="trackname" class="trackname">LSP - Magic City</h1>
+          <img class="playercover" src="{{album.albumcover.url}}" alt="">
+          <h1 id="trackname" class="trackname">{{album.author_name}} - {{album.name}}</h1>
         </div>
         <div class="controls">
           <img id="prevtrack" src="{% static 'music/images/next_track.svg'%}" class="button prevtrack">
@@ -40,7 +40,7 @@
       <div class="tracks">
         {% for song in songs %}
           <div class="track">
-            <img src="{% static 'music/images/magiccity.png'%}" class="trackcover">
+            <img src="{{song.songcover.url}}" class="trackcover">
             <img data-index = "" id="trackplaybtn" src="{% static 'music/images/play.svg'%}" class="trackplay">
             <img data-index = "" id="trackstopbtn" src="{% static 'music/images/stop.svg'%}" class="trackplay" style="display: none">
             <h1 class="trackname songname">{{song.author}} - {{song.name}}</h1>

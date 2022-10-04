@@ -255,13 +255,50 @@ footer {
   height: 50px;
 }
 
+.author{
+  width: 84%;
+  height: 240px;
+  background: #DEDEFF;
+  margin: 10px 0 5px 0;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+}
 
+.authorname {
+  margin: 0;
+  width: 397px;
+  height: 240px;
+}
 
+.authorcover {
+  margin: 17px 0 0 0;
+  width: 397px;
+  height: 206px;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.authordisription {
+  margin: 0;
+  height: 216px;
+  align-items: center;
+  justify-content: center;
+}
+
+.authordisription h1 {
+  margin: 12px 40px 12px 40px;
+  vertical-align: middle;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+}
 
 .albums {
   margin: 0;
-  margin-top: 10px;
-  width: 1250px;
+  margin-top: 5px;
+  width: 85%;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -275,7 +312,7 @@ footer {
   width: 397px;
   height: 397px;
   display: flex;
-  transition: filter 0.2s ease;
+  transition: filter 1.7s ease;
 }
 
 .album:hover {
